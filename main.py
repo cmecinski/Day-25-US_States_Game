@@ -29,7 +29,7 @@ while game_is_on:
         if counter == 50:
             game_is_on = False
     else:
-        print("OOPS")
+        print("OOPS try again")
 
 
 screen.exitonclick()

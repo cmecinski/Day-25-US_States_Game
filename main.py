@@ -17,7 +17,7 @@ game_title = "Guess the State"
 while game_is_on:
     answer_state = screen.textinput(title=game_title, prompt="What's another state's name?").title()
     data = pandas.read_csv("50_states.csv")
-    print(answer_state)
+    # print(answer_state)
     if answer_state in data["state"].values and not answer_state in state_list:
         # print(data[data.state == answer_state])
         state_list.append(answer_state)

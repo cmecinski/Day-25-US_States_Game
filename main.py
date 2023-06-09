@@ -30,7 +30,16 @@ while game_is_on:
             game_is_on = False
     else:
         print("OOPS try again")
+    if answer_state == "Exit":
+        missing_states = []
+        for state in data.state.to_list():
+            if state not in state_list:
+                missing_states.append(state)
+        new_data = pandas.DataFrame(missing_states)
+        new_data.to_csv("states_to_learn.csv")
+        break
 
 
-screen.exitonclick()
+
+
 
